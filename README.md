@@ -6,6 +6,8 @@ complexity 5–15); every generated test was compiled, run and measured for **br
 
 Course project for **SWT301 – Software Testing**, FPT University HCMC (2026), done as a team.
 
+**Roles.** Nguyễn Dương Thiên Ý designed the end-to-end pipeline flow and ran the Gemini-3.5-Flash-Lite experiment; the other five models were run by teammates.
+
 ## Research questions
 
 1. How reliable are LLM-generated unit tests (share that compile, run and pass) and how much branch coverage do they reach?
