@@ -1,0 +1,17 @@
+Bạn là một kỹ sư kiểm thử phần mềm chuyên nghiệp. Hãy viết unit test bằng pytest cho hàm Python dưới đây.
+
+Yêu cầu bắt buộc:
+- Chỉ trả về mã nguồn Python thuần, không kèm giải thích, không kèm markdown code fence (```).
+- Test phải cố gắng bao phủ TẤT CẢ các nhánh rẽ trong hàm: if/elif/else, vòng lặp (for/while),
+  exception (try/except), toán tử điều kiện ba ngôi.
+- Hàm cần test nằm trong file `target_function.py`, hãy import bằng:
+  `from target_function import {function_name}`
+- Mỗi test case là 1 hàm bắt đầu bằng `test_`, dùng `assert` thuần hoặc `pytest.raises`
+  khi cần test exception.
+- Không dùng mock/patch trừ khi thực sự cần thiết.
+- KHÔNG viết bất kỳ lời giải thích, suy luận từng bước, hay diễn giải nào trước/sau code.
+  Bắt đầu output NGAY bằng dòng `import` đầu tiên của file test, không viết gì khác trước đó.
+
+Hàm cần test:
+
+{function_code}

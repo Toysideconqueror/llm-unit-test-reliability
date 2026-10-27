@@ -1,0 +1,40 @@
+# ============================================================
+# Copy file này thành config.yaml rồi chỉnh 3 dòng đầu tiên.
+# Không commit config.yaml có chứa key thật lên git chung.
+# ============================================================
+
+provider: "gemini"                # gemini | groq | openrouter | deepseek | cohere
+model_name: "gemini-3.5-flash-lite"    # tên model cụ thể của provider trên
+api_key_secret_name: "GEMINI_API_KEY"   # tên Colab Secret (Settings -> Secrets) chứa key cá nhân
+
+# Ví dụ dùng Cohere North Mini Code qua OpenRouter (key lấy tại openrouter.ai/settings/keys)
+# thay vì Gemini trực tiếp (đổi 3 dòng trên thành):
+#   provider: "openrouter"
+#   model_name: "cohere/north-mini-code:free"
+#   api_key_secret_name: "OPENROUTER_API_KEY"   # tên Colab Secret chứa key OpenRouter của bạn
+#
+# (Nếu sau này có key Cohere trực tiếp thay vì qua OpenRouter, dùng provider: "cohere",
+#  model_name: "north-mini-code-1-0", client tương ứng đã có sẵn ở src/llm_clients/cohere_client.py)
+
+languages: ["python", "java"]
+
+dataset:
+  python_path: "data/functions_python.jsonl"
+  java_path: "data/functions_java.jsonl"
+
+generation:
+  temperature: 0.2
+  max_output_tokens: 8192  # North Mini Code cần nhiều token hơn vì tốn budget cho reasoning
+                            # trước khi sinh code — 3072 hay bị hết trước khi ra tới code.
+                            # Model khác (Gemini...) vẫn hoạt động bình thường với giá trị này.
+  max_retries: 5
+  retry_backoff_base_seconds: 4
+  # Chỉnh theo free-tier RPM của provider bạn dùng (vd Gemini free ~15 RPM tuỳ model)
+  requests_per_minute_limit: 10
+
+paths:
+  drive_root: "/content/drive/MyDrive/RBL_LLM_TestGen"
+  raw_output_dir: "outputs/raw/{tag}"
+  extracted_tests_dir: "outputs/tests/{tag}"
+  coverage_reports_dir: "outputs/coverage/{tag}"
+  results_csv: "outputs/results_{tag}.csv"

@@ -1,0 +1,7 @@
+model,total,ok,ok_rate_pct,avg_branch_cov_ok_pct,median_branch_cov_ok_pct,avg_testcases
+Gemini-3.7-Flash,646,516,79.88,90.39,100.0,11.84
+GPT-5.6-Luna,646,451,69.81,86.41,100.0,12.14
+Gemma-4-31B-IT,646,354,54.8,95.76,100.0,9.92
+Gemini-3.5-Flash-Lite,646,293,45.36,94.41,100.0,7.59
+Gemma-4-26B-A4B-IT,646,290,44.89,94.85,100.0,9.82
+GPT-OSS-120B,646,202,31.27,94.45,100.0,8.58

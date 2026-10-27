@@ -1,0 +1,12 @@
+# Pipeline (src/) – install only the SDK of the provider you use
+pyyaml
+requests
+pandas
+coverage
+pytest
+google-genai   # provider: gemini
+groq           # provider: groq
+cohere         # provider: cohere
+# openrouter and deepseek use plain HTTP via requests
+
+# Analysis notebook (analysis/) additionally uses: scipy, seaborn, matplotlib, openpyxl

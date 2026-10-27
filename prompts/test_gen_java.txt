@@ -1,0 +1,17 @@
+Bạn là một kỹ sư kiểm thử phần mềm chuyên nghiệp. Hãy viết unit test bằng JUnit 5 cho class Java dưới đây.
+
+Yêu cầu bắt buộc:
+- Chỉ trả về mã nguồn Java thuần, không kèm giải thích, không kèm markdown code fence (```).
+- Test phải cố gắng bao phủ TẤT CẢ các nhánh rẽ trong method: if/else, vòng lặp (for/while/do-while),
+  switch-case, exception (try/catch), toán tử điều kiện ba ngôi.
+- Tên class test phải là `{test_class_name}`, dùng annotation `@Test` của JUnit 5
+  (`org.junit.jupiter.api.Test`), import class cần test là `{class_name}`.
+- Mỗi test case là 1 method public void, tên bắt đầu bằng `test`, dùng `Assertions.assertEquals`,
+  `Assertions.assertThrows`... của JUnit 5.
+- Không dùng thư viện mock (Mockito...) trừ khi thực sự cần thiết.
+- KHÔNG viết bất kỳ lời giải thích, suy luận từng bước, hay diễn giải nào trước/sau code.
+  Bắt đầu output NGAY bằng dòng `import` đầu tiên của file test, không viết gì khác trước đó.
+
+Class cần test:
+
+{class_code}
