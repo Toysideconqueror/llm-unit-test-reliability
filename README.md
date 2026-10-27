@@ -111,6 +111,11 @@ Analysis only: upload `results/master_result.xlsx` to the analysis notebook.
 
 The pipeline, parsers, merge scripts and analysis notebook were written with the help of an LLM assistant (Claude); the team designed the experiment, ran the models and interpreted the results.
 
+## License
+
+Code, notebooks, results and documents in this repository are released under the [MIT License](LICENSE).
+Third-party function source code is **not** included and stays under its upstream licences (see below).
+
 ## Credits and licensing of the data
 
 Functions were sampled from public repositories and a benchmark, which keep their own licences: Java – TheAlgorithms/Java, mission-peace/interview, javadev/LeetCode-in-Java, williamfiset/Algorithms, phishman3579/java-algorithms-implementation; Python – UnLeakedTestBench, TheAlgorithms/Python, keon/algorithms, geekcomputers/Python, prabhupant/python-ds, sympy, scipy, numpy.
